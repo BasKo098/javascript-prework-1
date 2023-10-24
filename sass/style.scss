@@ -1,0 +1,189 @@
+//Global
+*, *::before, *::after {
+    box-sizing: border-box; }
+  
+
+//VARIABLES
+$color_one: #273c75;
+$color_two: #e1b12c;
+$color_three: #000000;
+$color_four: #fff; 
+
+body {
+    margin: 0;
+    text-align: center;
+    color: $color_one;
+    background-color: #273c75;
+    font-size: 16px;
+    line-height: 1.7;
+    font-style: normal;
+    }  
+
+.container {
+ padding: 10px 10px;
+ margin: 30px 30px;
+ height: 300px;
+}
+
+@keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  //Container
+.container h1 {
+    animation: flicker 2s infinite; /* animacja na elemencie h1 */
+    display: inline-block; 
+    font-size: 40px;
+    color: $color_two;
+    padding: 0; 
+}
+
+.container h2 {
+    font-size: 50px;
+    color: $color_two;
+    padding-bottom: 10px; 
+    word-spacing: 7px;
+    margin: 0;
+}
+
+.container p {
+    font-size: 30px;
+    color: $color_two;
+    padding-bottom: 20px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.container i {
+    font-size: 70px;
+    color:#e1b12c;
+    padding: 5px 0;
+    height: 70px;
+    width: 70px;
+}
+
+.container a {
+    font-size: 0;
+}
+
+.container button {
+    text-align: center;
+    background-color: $color_two;
+    padding: 30px 130px;
+    margin: 20px 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $color_one;
+}
+
+.container button:hover{
+    background-color: $color_three;
+    color: $color_four;
+}
+
+.messages {
+    font-size: 30px;
+    color: $color_two;
+    padding: 20px 0;
+    line-height: 1.3;
+}
+
+.container #xResult {
+    font-size: 24px;
+    color:#e1b12c;
+}
+
+.container #yResult {
+    font-size: 24px;
+    color:#e1b12c;
+}
+
+.container .score{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.container #result {
+    font-size: 24px;
+    color:#e1b12c;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .container button {
+        text-align: center;
+        background-color: $color_two;
+        padding: 10px 70px;
+        margin: 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $color_one;
+    }
+
+    .container h1 {
+        animation: flicker 2s infinite; 
+        display: inline-block; 
+        font-size: 40px;
+        color: $color_two;
+        padding: 10px; 
+        margin: 0;
+        line-height: 1.1;
+    }
+
+    .container h2 {
+        font-size: 20px;
+        color: $color_two;
+        padding-bottom: 0 20px; 
+        word-spacing: 7px;
+        margin: 0;
+        line-height: 1.1;
+    }
+
+    .container p {
+        font-size: 18px;
+        color: $color_two;
+        padding-bottom: 20px;
+        padding: 10px 0;
+        margin: 0;
+        line-height: 1.1
+    }
+    
+    .container i {
+        font-size: 30px;
+        color:#e1b12c;
+        padding: 5px 0;
+        height: 40px;
+        width: 40px;
+    }
+
+    .messages {
+        font-size: 16px;
+        color: $color_two;
+        padding: 20px 0;
+        line-height: 1.3;
+    }
+    
+    .container #result {
+        font-size: 16px;
+        color:#e1b12c;
+    }
+
+    .container #xResult {
+        font-size: 16px;
+        color:#e1b12c;
+    }
+    
+    .container #yResult {
+        font-size: 16px;
+        color:#e1b12c;
+    }
+}    
