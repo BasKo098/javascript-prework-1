@@ -30,14 +30,11 @@ function buttonClicked(argButtonName) {
 function getMoveName(argMoveId) {
   	if (argMoveId == 1) {
     	return 'kamień';
-  	}
-  	else if (argMoveId == 2) {
+  	} else if (argMoveId == 2) {
 		return 'papier';
-  	} 
-  	else if (argMoveId == 3) {
+  	} else if (argMoveId == 3) {
 		return 'nożyce'
- 	} 
-  	else {
+ 	} else {
     	printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
     	return 'kamień';
   	}
@@ -52,27 +49,23 @@ function displayResult(argPlayerMove, argComputerMove) {
 		xResult.push(1);
 		yResult.push(0);
 		xTotalPoints += 1;
-		}
-	else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce'){
+		} else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce'){
 		printMessage('WYGRYWASZ!');
 		xResult.push(1);
 		yResult.push(0);
 		xTotalPoints += 1;
-		}
-	else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier'){
+		} else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier'){
 		printMessage('WYGRYWASZ!');
 		xResult.push(1);
 		yResult.push(0);
 		xTotalPoints += 1;
-		}
-	else if (argPlayerMove == argComputerMove){
+		} else if (argPlayerMove == argComputerMove){
 		printMessage('REMIS!');
 		xResult.push(1);
 		yResult.push(1);
 		xTotalPoints += 1;
 		yTotalPoints += 1;	
-		}
-	else {
+		} else {
 		printMessage('PRZEGRYWASZ :(');
 		xResult.push(0);
 		yResult.push(1);
